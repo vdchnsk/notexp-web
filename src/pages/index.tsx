@@ -1,7 +1,6 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '@styles/home/home.module.scss'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import styles from '@styles/home/home.module.scss';
 
 const HomePage: NextPage = () => {
     return (
@@ -16,7 +15,7 @@ const HomePage: NextPage = () => {
 
             <footer className={styles.footer}></footer>
         </div>
-    )
-}
+    );
+};
 
-export default HomePage
+export default HomePage;
