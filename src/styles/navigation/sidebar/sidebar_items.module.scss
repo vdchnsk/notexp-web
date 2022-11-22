@@ -1,0 +1,23 @@
+@use '../../variables.scss' as vars;
+
+.sideBar {
+    background-color: vars.$color_bg_secondary_dark;
+    color: white;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    align-items: flex-start;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    -ms-border-radius: 0.25rem;
+    -o-border-radius: 0.25rem;
+
+    &Item {
+        font-size: 1.1rem;
+        padding: 0.5rem;
+    }
+}

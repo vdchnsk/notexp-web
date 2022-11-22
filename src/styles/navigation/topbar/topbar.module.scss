@@ -1,0 +1,9 @@
+@use '../../variables.scss' as vars;
+
+.main {
+    height: 120px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: vars.$color_bg_secondary_dark;
+}

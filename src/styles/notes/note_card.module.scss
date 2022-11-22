@@ -1,0 +1,24 @@
+@use '../variables.scss' as vars;
+
+.note_card {
+    overflow: hidden;
+    min-width: 100px;
+    width: 240px;
+    min-height: 100px;
+    max-height: 300px;
+    align-items: center;
+    background-attachment: vars.$color_call_to_action;
+    border: 4px solid #dedfff;
+    background-color: #f8f8ff;
+    padding: 0.1em;
+    border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
+    -ms-border-radius: 0.25em;
+    -o-border-radius: 0.25em;
+}
+
+.note_card__preview {
+    width: 100%;
+    height: 40%;
+}
