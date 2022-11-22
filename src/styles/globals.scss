@@ -1,4 +1,15 @@
+/** @type {import('tailwindcss').Config} */
 @use './variables.scss' as vars;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --bg-primary: 29, 29, 29;
+    }
+}
 
 html,
 body {
