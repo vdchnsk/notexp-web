@@ -12,14 +12,15 @@ const textColor = {
 };
 
 const backgroundColor = {
-    primary: generateColorClass('bg-primary'),
-    secondary: '#0f0f0f',
+    primary: '#0f0f0f',
     main: '#fff',
+    secondary: generateColorClass('bg-primary'),
     secondary_light: '#2b3885',
     secondary_dark: '#192151',
 };
 
 module.exports = {
+    mode: 'jit',
     content: ['./src/pages/**/*.{js,jsx,ts,tsx}', './src/components/**/*.{js,jsx,ts,tsx}'],
     darkMode: 'class',
     theme: {
@@ -27,6 +28,7 @@ module.exports = {
             textColor,
             backgroundColor,
             colors: {
+                border_primary: '#0f0f0f',
                 call_to_acion: '#49ae92',
             },
             backgroundImage: {},

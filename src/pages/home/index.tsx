@@ -1,21 +1,25 @@
-import type { NextPage } from 'next'
-import { MainLayout } from '../../components/common/MainLayout'
-import styles from '@styles/home/home.module.scss'
-import { ContentGridLarge } from '../../components/grids/contentGrid/ContentGridLarge'
-import { TopBar } from '../../components/navigation/TopBar'
+import type { NextPage } from 'next';
+import { MainLayout } from '../../components/common/MainLayout';
+import { ContentGridLarge } from '../../components/grids/contentGrid/ContentGridLarge';
 
 const HomePage: NextPage = () => {
     return (
         <MainLayout title="🏠 Home">
-            <div className={styles.container}>
-                <main className={styles.main}>
+            <div className={``}>
+                <main
+                    className={`
+                        h-screen
+                        bg-main
+                        ml-auto
+                    `}
+                >
                     <ContentGridLarge content={[]} />
                 </main>
 
-                <footer className={styles.footer}></footer>
+                <footer className={``}></footer>
             </div>
         </MainLayout>
-    )
-}
+    );
+};
 
-export default HomePage
+export default HomePage;

@@ -1,16 +1,20 @@
-import { StraightPagination } from '../../../pagination/StraightPagination'
-
-import styles from '@styles/grids/content_grid_large/main.module.scss'
+import { StraightPagination } from '../../../pagination/StraightPagination';
 
 interface ContentGridLargeProps {
-    readonly content: Array<any>
+    readonly content: Array<any>;
 }
 
 export const ContentGridLarge = ({ content }: ContentGridLargeProps): JSX.Element => {
     return (
-        <div className={styles.main}>
+        <div
+            className={`
+                h-full
+                flex flex-col 
+                justify-center items-center
+            `}
+        >
             <span>Home</span>
             <StraightPagination count={10} />
         </div>
-    )
-}
+    );
+};

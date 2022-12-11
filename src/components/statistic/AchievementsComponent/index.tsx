@@ -1,11 +1,29 @@
-import { memo } from 'react';
-import styles from '../../../styles/statistic/achievements_component.module.scss';
+import { FC, memo } from 'react';
 import { AchievementProgress } from './AchievementProgress';
 
-export const AchievementsComponent = memo((): JSX.Element => {
+export const AchievementsComponent: FC = memo((): JSX.Element => {
     return (
-        <div className={styles.main}>
-            <h2 className={styles.progress_window}> Your Progress</h2>
+        <div
+            className={`
+                flex flex-col justify-center 
+                overflow-hidden
+                bg-secondary
+                rounded-md
+                mt-4 mb-4
+                w-full h-[200px]
+
+            `}
+        >
+            <h2
+                className={`
+                h-full
+                text-primary
+                text-center
+                m-4
+            `}
+            >
+                Your Progress
+            </h2>
             <AchievementProgress progressValue={80} />
         </div>
     );

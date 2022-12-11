@@ -1,5 +1,14 @@
-import styles from '@styles/footer/footer_main.module.scss'
-
 export const FooterMain = (): JSX.Element => {
-    return <div className={styles.main}>Footer</div>
-}
+    return (
+        <div
+            className={`
+                w-full
+                h-[300px]
+                bg-secondary
+                border-t-8 border-border_primary
+            `}
+        >
+            Footer
+        </div>
+    );
+};

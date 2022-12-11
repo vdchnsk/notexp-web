@@ -1,13 +1,12 @@
-import RichTextEditor from '../rte/RichTextEditor'
-import { useState } from 'react'
-import { useAppDispatch, useAppSelector } from '../../../redux/hooks'
-import { draftActions, selectText } from '../../../redux/slices/DraftSlice'
+import RichTextEditor from '../rte/RichTextEditor';
+import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
+import { draftActions, selectText } from '../../../redux/slices/DraftSlice';
 
-import styles from '../../../styles/draft/rte.module.scss'
+import styles from '../../../styles/draft/rte.module.scss';
 
 export const CreateDraftRTE: React.FC = (): JSX.Element => {
-    const dispatch = useAppDispatch()
-    const createDraftText = useAppSelector(selectText)
+    const dispatch = useAppDispatch();
+    const createDraftText = useAppSelector(selectText);
     // const [editorValue, setEditorValue] = useState(createDraftText)
 
     return (
@@ -16,7 +15,7 @@ export const CreateDraftRTE: React.FC = (): JSX.Element => {
                 className={styles.rich_text_editor}
                 value={createDraftText}
                 onChange={(value) => {
-                    dispatch(draftActions.updateText(value))
+                    dispatch(draftActions.updateText(value));
                 }}
                 sticky={true}
                 controls={[
@@ -28,5 +27,5 @@ export const CreateDraftRTE: React.FC = (): JSX.Element => {
                 ]}
             />
         </div>
-    )
-}
+    );
+};

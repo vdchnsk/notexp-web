@@ -1,14 +1,12 @@
-import type { NextPage } from 'next'
-import { MainLayout } from '../../components/common/MainLayout'
-import styles from '@styles/home/home.module.scss'
+import type { NextPage } from 'next';
 
 const OnboardingPage: NextPage = () => {
     return (
-        <div className={styles.container}>
-            <main className={styles.main}></main>
-            <footer className={styles.footer}></footer>
+        <div className={``}>
+            <main className={``}></main>
+            <footer className={``}></footer>
         </div>
-    )
-}
+    );
+};
 
-export default OnboardingPage
+export default OnboardingPage;

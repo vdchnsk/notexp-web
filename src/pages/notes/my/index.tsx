@@ -10,8 +10,6 @@ import { NotesGrid } from '@components/notes/NotesGrid';
 import { INotePreview } from '../../../@types/notes';
 import { default as mockDB } from '../../../mockDB.json';
 
-import styles from '@styles/draft/create-draft/create-draft.module.scss';
-
 const HomePage: NextPage = () => {
     const router = useRouter();
 
@@ -20,8 +18,14 @@ const HomePage: NextPage = () => {
     return (
         <MainLayout title="Your Notes">
             <div>
-                <main className={styles.main}>
-                    <div className={styles.header}>
+                <main
+                    className={`
+                        p-2
+                        w-full min-h-[50vh]
+                        bg-main
+                    `}
+                >
+                    <div className={`mb-4`}>
                         <h1> My library of Notes:</h1>
                         <Button
                             variant="outlined"

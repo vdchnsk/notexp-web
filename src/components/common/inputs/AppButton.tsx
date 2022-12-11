@@ -1,9 +1,9 @@
-import { Button } from '@mui/material'
+import { Button } from '@mui/material';
 
 interface IButtonProps {
-    onClick: () => void
-    children: React.ReactNode
-    variant?: string
+    onClick: () => void;
+    children: React.ReactNode;
+    variant?: string;
 }
 
 export const AppButton = ({ children, onClick, variant = 'standart' }: IButtonProps) => {
@@ -11,5 +11,5 @@ export const AppButton = ({ children, onClick, variant = 'standart' }: IButtonPr
         <Button color="primary" variant="contained" onClick={onClick}>
             {children}
         </Button>
-    )
-}
+    );
+};

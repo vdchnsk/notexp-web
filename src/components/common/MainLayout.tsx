@@ -1,14 +1,14 @@
-import Head from 'next/head'
-import { MuiThemeProvider } from '@material-ui/core'
-import { PROJECT_NAME } from '../../constants/general'
-import { SideBar } from '../navigation/SideBar'
-import { FooterMain } from '../footer/FooterMain'
-import { TopBar } from '../navigation/TopBar'
-import { mainTheme } from '../../styles/material_ui_presets/main_preset'
+import Head from 'next/head';
+import { MuiThemeProvider } from '@material-ui/core';
+import { PROJECT_NAME } from '../../constants/general';
+import { SideBar } from '../navigation/SideBar';
+import { FooterMain } from '../footer/FooterMain';
+import { TopBar } from '../navigation/TopBar';
+import { mainTheme } from '../../styles/material_ui_presets/main_preset';
 
 interface MainLayoutProps {
-    children: JSX.Element
-    title: string
+    children: JSX.Element;
+    title: string;
 }
 
 export const MainLayout = ({ children, title = 'Next' }: MainLayoutProps) => {
@@ -21,8 +21,8 @@ export const MainLayout = ({ children, title = 'Next' }: MainLayoutProps) => {
                     </title>
                 </Head>
                 <SideBar />
-
-                <main style={{ margin: '0 0 0 25%' }}>
+                {/* Margin must be calculated on dynamically*/}
+                <main className={`ml-[25%]`}>
                     <TopBar />
                     {children}
                 </main>
@@ -30,5 +30,5 @@ export const MainLayout = ({ children, title = 'Next' }: MainLayoutProps) => {
                 <FooterMain />
             </MuiThemeProvider>
         </>
-    )
-}
+    );
+};
