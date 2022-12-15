@@ -7,8 +7,6 @@ interface INotesGridParams {
 }
 
 export const NotesGrid = ({ notes }: INotesGridParams): JSX.Element => {
-    console.log(notes);
-
     return (
         <div
             className={`

@@ -48,7 +48,7 @@ export const AuthScreen = ({ config }: IAuthScreenConfig): JSX.Element => {
         <MainLayout title={`${config.type.title}`}>
             <div
                 className={`
-                    flex justify-center
+                    flex justify-center items-center
                     h-screen w-full
                     overflow-auto
                 `}
@@ -58,6 +58,7 @@ export const AuthScreen = ({ config }: IAuthScreenConfig): JSX.Element => {
                         flex flex-col 
                         items-center  justify-center
                         overflow-auto
+                        gap-4
                         min-h-[300px] max-h-[500px]
                         w-1/2 max-w-[800px] min-w-[300px]
                         bg-main
@@ -68,7 +69,7 @@ export const AuthScreen = ({ config }: IAuthScreenConfig): JSX.Element => {
                     <h1> Log in</h1>
                     <div
                         className={`
-                            flex flex-col
+                            flex flex-col gap-3
                             h-1/2 w-full
                             items-center
                             mt-[4px] mb-[3px]

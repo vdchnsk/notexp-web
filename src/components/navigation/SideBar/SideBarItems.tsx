@@ -43,7 +43,7 @@ export const SideBarItems = memo((): JSX.Element => {
                     isThisTabPermitted(element) && (
                         <span
                             className={`
-                                p-2 text-lg
+                                p-2 text-md
                             `}
                             key={element.id}
                         >
