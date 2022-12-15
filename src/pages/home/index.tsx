@@ -9,8 +9,9 @@ const HomePage: NextPage = () => {
                 <main
                     className={`
                         h-screen
-                        bg-main
+                        bg-secondary
                         ml-auto
+                        text-primary
                     `}
                 >
                     <ContentGridLarge content={[]} />

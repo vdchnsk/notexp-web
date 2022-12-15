@@ -51,6 +51,7 @@ export const AuthScreen = ({ config }: IAuthScreenConfig): JSX.Element => {
                     flex justify-center items-center
                     h-screen w-full
                     overflow-auto
+                    text-primary
                 `}
             >
                 <div
@@ -61,7 +62,7 @@ export const AuthScreen = ({ config }: IAuthScreenConfig): JSX.Element => {
                         gap-4
                         min-h-[300px] max-h-[500px]
                         w-1/2 max-w-[800px] min-w-[300px]
-                        bg-main
+                        bg-secondary_light
                         rounded-md
                     `}
                 >

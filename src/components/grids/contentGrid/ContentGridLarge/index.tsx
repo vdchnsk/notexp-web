@@ -14,7 +14,7 @@ export const ContentGridLarge = ({ content }: ContentGridLargeProps): JSX.Elemen
             `}
         >
             <span>Home</span>
-            <StraightPagination count={10} />
+            {/* <StraightPagination count={10} /> */}
         </div>
     );
 };

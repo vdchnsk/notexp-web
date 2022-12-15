@@ -8,6 +8,7 @@
 @layer base {
     :root {
         --bg-primary: 29, 29, 29;
+        --bg-secondary-light: 55, 55, 55;
     }
 }
 
@@ -32,7 +33,7 @@ body {
 }
 /*ScrollBar settings*/
 ::-webkit-scrollbar-track {
-    background-color: vars.$color_bg_secondary_light;
+    background-color: none;
     border-radius: 0.25rem;
     -webkit-border-radius: 0.25rem;
     -moz-border-radius: 0.25rem;
@@ -42,11 +43,10 @@ body {
 
 ::-webkit-scrollbar {
     width: 12px;
-    background-color: vars.$color_bg_secondary_dark;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: vars.$color_bg_secondary_dark;
+    background-color: white;
     border-radius: 0.25rem;
     -webkit-border-radius: 0.25rem;
     -moz-border-radius: 0.25rem;

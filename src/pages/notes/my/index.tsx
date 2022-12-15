@@ -22,19 +22,22 @@ const HomePage: NextPage = () => {
                     className={`
                         p-2
                         w-full min-h-[50vh]
-                        bg-main
+                        bg-secondary
+                        text-primary
                     `}
                 >
-                    <div className={`mb-4`}>
-                        <h1> My library of Notes:</h1>
-                        <Button
-                            variant="outlined"
-                            color="primary"
-                            startIcon={<CreateIcon />}
-                            onClick={() => router.push(pushNamed('create-draft'))}
-                        >
-                            Create a Note
-                        </Button>
+                    <div className={`mb-4 flex flex-col gap-4`}>
+                        <h1 className={`text-xl`}> My library of Notes:</h1>
+                        <div className={`flex flex-row`}>
+                            <Button
+                                variant="outlined"
+                                color="primary"
+                                startIcon={<CreateIcon />}
+                                onClick={() => router.push(pushNamed('create-draft'))}
+                            >
+                                Create a Note
+                            </Button>
+                        </div>
                     </div>
                     <NotesGrid notes={notesList} />
                 </main>

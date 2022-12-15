@@ -13,13 +13,16 @@ export const NoteCard = ({ noteData }: INoteCardParams): JSX.Element => {
                 min-h-[100px] max-h-[300px]
                 p-1
                 items-center 
-                border-4 
+                bg-secondary_light
+                border-border_primary
                 rounded-md
+                text-primary
             `}
         >
             <img
                 className={`
-                    w-full h-2/5
+                    object-cover
+                    w-full max-h-[200px]
                 `}
                 src={noteData.mainPreviewImage}
             />

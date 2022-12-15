@@ -15,7 +15,7 @@ const backgroundColor = {
     primary: '#0f0f0f',
     main: '#fff',
     secondary: generateColorClass('bg-primary'),
-    secondary_light: '#2b3885',
+    secondary_light: generateColorClass('bg-secondary-light'),
     secondary_dark: '#192151',
 };
 
@@ -28,7 +28,8 @@ module.exports = {
             textColor,
             backgroundColor,
             colors: {
-                border_primary: '#0f0f0f',
+                border_primary: backgroundColor.primary,
+                border_secondary: backgroundColor.secondary,
                 call_to_acion: '#49ae92',
             },
             backgroundImage: {},

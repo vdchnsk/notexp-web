@@ -1,41 +1,36 @@
-import type { NextPage } from 'next'
-import { MainLayout } from '../../../components/common/MainLayout'
-import { CreateDraft } from '../../../components/draft/create-draft/CreateDraft'
+import type { NextPage } from 'next';
+import { MainLayout } from '../../../components/common/MainLayout';
+import { CreateDraft } from '../../../components/draft/create-draft';
 
-import styles from '@styles/draft/create-draft/create-draft.module.scss'
-import { Button } from '@material-ui/core'
-import { TextTag } from '@components/common/tags/Tag'
+import { Button } from '@material-ui/core';
+import { TextTag } from '@components/common/tags/Tag';
 
 const HomePage: NextPage = () => {
     return (
         <MainLayout title="Create Draft">
-            <div>
-                <main className={styles.main}>
-                    <h1> Create your draft</h1>
-                    <h2>Choose the topic</h2>
+            <div className="flex justify-center bg-secondary text-primary">
+                <main className="flex flex-col p-3 min-w-[700px] min-h-[50vh] gap-1 rounded-md">
+                    <h1 className={`text-2xl mb-6`}>Create your draft</h1>
+                    <h2 className={'text-xl'}>Choose the topic</h2>
                     ...
-                    <h2>Choose note's preview image</h2>
+                    <h2 className={'text-xl'}>Choose note's preview image</h2>
                     ...
-                    <h2>Short description</h2>
+                    <h2 className={'text-xl'}>Short description</h2>
                     ...
-                    <h2>Note content</h2>
+                    <h2 className={'text-xl'}>Note content</h2>
                     <CreateDraft />
-                    <h2>Choose corresponding tags:</h2>
-                    <>
+                    <h2 className={'text-xl'}>Choose corresponding tags:</h2>
+                    <div className="flex flex-row mb-6">
                         <TextTag value="film" isActive />
                         <TextTag value="FILM" isActive />
-                    </>
-                    <br />
-                    <br />
+                    </div>
                     <Button variant="outlined" color="primary">
                         Preview
                     </Button>
                 </main>
-
-                <footer></footer>
             </div>
         </MainLayout>
-    )
-}
+    );
+};
 
-export default HomePage
+export default HomePage;
