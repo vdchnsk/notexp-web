@@ -20,8 +20,8 @@ const HomePage: NextPage = () => {
             <div>
                 <main
                     className={`
-                        p-2
-                        w-full min-h-[50vh]
+                        p-4
+                        w-full 
                         bg-secondary
                         text-primary
                     `}
@@ -41,7 +41,6 @@ const HomePage: NextPage = () => {
                     </div>
                     <NotesGrid notes={notesList} />
                 </main>
-                <footer></footer>
             </div>
         </MainLayout>
     );

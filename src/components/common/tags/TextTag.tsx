@@ -12,7 +12,8 @@ export const TextTag = ({ value, color = randomColor(), isActive = false }: ITex
         <span
             style={{ color: color, borderColor: color }}
             className={`
-                p-1 mr-1 
+                p-1 mr-1
+                block
                 text-center
                 rder-solid border-2 rounded-md 
                 ${isActive ? 'cursor-pointer' : 'cursor-default'}

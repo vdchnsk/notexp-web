@@ -10,11 +10,11 @@ interface SideBarItem {
 }
 
 const sideBarElements: SideBarItem[] = [
-    { title: '🔍 Search For Notes', route: '/home', id: 0 },
-    { title: '📚 My Library of Notes', route: '/notes/my', id: 1 },
-    { title: '⚙️ Settings', route: '/me/settingss', id: 4, excludedPermitions: [PermissionLevels.deafult] },
-    { title: '🚪 Log out', id: 2, excludedPermitions: [PermissionLevels.deafult] },
-    { title: '🚪 Login', route: '/authentication/login', id: 3 },
+    { title: 'Search For Notes', route: '/home', id: 0 },
+    { title: 'My Library of Notes', route: '/notes/my', id: 1 },
+    { title: 'Settings', route: '/me/settingss', id: 4, excludedPermitions: [PermissionLevels.deafult] },
+    { title: 'Log out', id: 2, excludedPermitions: [PermissionLevels.deafult] },
+    { title: 'Login', route: '/authentication/login', id: 3 },
 ];
 
 export const SideBarItems = memo((): JSX.Element => {

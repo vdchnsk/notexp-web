@@ -4,7 +4,7 @@ import { ContentGridLarge } from '../../components/grids/contentGrid/ContentGrid
 
 const HomePage: NextPage = () => {
     return (
-        <MainLayout title="🏠 Home">
+        <MainLayout title="Home">
             <div className={``}>
                 <main
                     className={`

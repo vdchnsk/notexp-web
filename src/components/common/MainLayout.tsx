@@ -20,13 +20,14 @@ export const MainLayout = ({ children, title = 'Next' }: MainLayoutProps) => {
                     {PROJECT_NAME} | {title}
                 </title>
             </Head>
-            <SideBar />
-            <main style={{ marginLeft: `calc(${SidebarWidth})` }}>
-                <TopBar />
-                <div style={{ transform: `translateY(calc(${topBarHeight}))` }}>{children}</div>
-            </main>
-
-            <FooterMain />
+            <div className={`flex flex-row`}>
+                <SideBar />
+                <main className={`flex-1`}>
+                    <TopBar />
+                    <div style={{ transform: `translateY(calc(${topBarHeight}))` }}>{children}</div>
+                    <FooterMain />
+                </main>
+            </div>
         </MuiThemeProvider>
     );
 };

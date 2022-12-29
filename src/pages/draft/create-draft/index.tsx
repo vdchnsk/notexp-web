@@ -3,7 +3,7 @@ import { MainLayout } from '../../../components/common/MainLayout';
 import { CreateDraft } from '../../../components/draft/create-draft';
 
 import { Button } from '@material-ui/core';
-import { TextTag } from '@components/common/tags/Tag';
+import { TextTag } from '@components/common/tags/TextTag';
 
 const HomePage: NextPage = () => {
     return (

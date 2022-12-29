@@ -7,8 +7,6 @@ export const FooterMain = (): JSX.Element => {
                 bg-secondary
                 border-t-8 border-border_primary
             `}
-        >
-            Footer
-        </div>
+        ></div>
     );
 };
