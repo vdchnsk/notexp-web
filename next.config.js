@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 
-const path = require('path')
+const path = require('path');
 
 const nextConfig = {
+    images: { domains: ['images3.memedroid.com'] },
     reactStrictMode: true,
     trailingSlash: false,
 
@@ -11,9 +12,9 @@ const nextConfig = {
             ...config.resolve.alias,
             '@styles': path.resolve('./src/styles'),
             '@components': path.resolve('./src/components'),
-        }
+        };
 
-        return config
+        return config;
     },
 
     async redirects() {
@@ -23,8 +24,8 @@ const nextConfig = {
                 destination: '/home',
                 permanent: true,
             },
-        ]
+        ];
     },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
