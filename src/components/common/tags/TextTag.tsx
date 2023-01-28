@@ -1,20 +1,21 @@
 import { ITextTag } from '../../../@types/tags';
-const randomColor = require('randomcolor'); //* unfortunutely, this lib doesnt support import/export
+import { formRGBA } from '../../../common/utils/utils';
 
-interface ITextTagProps extends ITextTag {
+interface ITextTagProps extends Omit<ITextTag, 'color'> {
     value: string;
-    color?: string;
+    color?: Array<string>;
     isActive?: boolean;
 }
 
-export const TextTag = ({ value, color = randomColor(), isActive = false }: ITextTagProps): JSX.Element => {
+export const TextTag = ({ value, color = ['105', '194', '164'], isActive = false }: ITextTagProps): JSX.Element => {
     return (
         <span
-            style={{ color: color, borderColor: color }}
+            style={{ color: formRGBA(color), borderColor: formRGBA(color), background: formRGBA([...color, '.03']) }}
             className={`
                 p-1 mr-1
                 block
                 text-center
+                opacity-80
                 rder-solid border-2 rounded-md 
                 ${isActive ? 'cursor-pointer' : 'cursor-default'}
             `}
