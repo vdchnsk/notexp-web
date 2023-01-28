@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { AppButton } from '@components/common/inputs/AppButton';
 import { AppTextField } from '@components/common/inputs/AppTextField';
 import { MainLayout } from '@components/common/MainLayout';
@@ -48,6 +49,7 @@ export const AuthScreen = ({ config }: IAuthScreenConfig): JSX.Element => {
         <MainLayout title={`${config.type.title}`}>
             <div
                 className={`
+                    bg-secondary
                     flex justify-center items-center
                     h-screen w-full
                     overflow-auto
@@ -67,6 +69,7 @@ export const AuthScreen = ({ config }: IAuthScreenConfig): JSX.Element => {
                     `}
                 >
                     {/* ! For tests */}
+
                     <h1> Log in</h1>
                     <div
                         className={`
@@ -76,7 +79,40 @@ export const AuthScreen = ({ config }: IAuthScreenConfig): JSX.Element => {
                             mt-[4px] mb-[3px]
                         `}
                     >
-                        {config.passEmailOrLogin && (
+                        <Formik
+                            initialValues={{ email: '', password: '' }}
+                            validate={(values) => {}}
+                            onSubmit={(values, { setSubmitting }) => {
+                                setTimeout(() => {
+                                    alert(JSON.stringify(values, null, 2));
+                                    setSubmitting(false);
+                                }, 400);
+                            }}
+                        >
+                            {({ isSubmitting }) => (
+                                <Form className="flex flex-col gap-4">
+                                    <Field type="text" name="email" />
+                                    <ErrorMessage name="email" component="div" />
+
+                                    <Field type="password" name="password" />
+                                    <ErrorMessage name="password" component="div" />
+                                    <button
+                                        className={`
+                                            bg-call_to_acion
+                                            p-1
+                                            rounded-sm
+                                        `}
+                                        onClick={() => {
+                                            dispatch(authActions.loginUser({ emailOrLogin, password }));
+                                        }}
+                                        type="submit"
+                                    >
+                                        Submit
+                                    </button>
+                                </Form>
+                            )}
+                        </Formik>
+                        {/* {config.passEmailOrLogin && (
                             <AppTextField
                                 onChange={(event: any) => {
                                     setEmailOrLogin(event.target.value);
@@ -120,15 +156,8 @@ export const AuthScreen = ({ config }: IAuthScreenConfig): JSX.Element => {
                                 placeholder={'Confirm password'}
                                 value={passwordConfirm}
                             />
-                        )}
+                        )} */}
                     </div>
-                    <AppButton
-                        onClick={() => {
-                            dispatch(authActions.loginUser({ emailOrLogin, password }));
-                        }}
-                    >
-                        Submit 🦙
-                    </AppButton>
                 </div>
             </div>
         </MainLayout>
