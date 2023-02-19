@@ -1,13 +1,10 @@
 import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { AppButton } from '@components/common/inputs/AppButton';
-import { AppTextField } from '@components/common/inputs/AppTextField';
-import { MainLayout } from '@components/common/MainLayout';
 
-import { BaseURI } from '../../common/constants';
-import { useAppDispatch, useAppSelector } from '../../redux/hooks';
-import { authActions, authState as AuthState, setUser } from '../../redux/slices/AuthSlice';
-import { User } from '../../entities/User';
+import { BaseURI } from '@common/constants/general';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
+import { authActions, authState } from '@/redux/slices/AuthSlice';
+import { MainLayout } from '@components/layout/MainLayout';
 
 export const AuthTypes = {
     login: {
@@ -43,7 +40,7 @@ export const AuthScreen = ({ config }: IAuthScreenConfig): JSX.Element => {
     const [passwordConfirm, setPasswordConfirm] = useState<string>('');
 
     const dispatch = useAppDispatch();
-    const authState = useAppSelector(AuthState);
+    const currentAuthState = useAppSelector(authState);
 
     return (
         <MainLayout title={`${config.type.title}`}>

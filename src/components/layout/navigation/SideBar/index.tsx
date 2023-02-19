@@ -1,5 +1,5 @@
-import { LogoComponent } from '../../common/LogoComponent';
-import { AchievementsComponent } from '../../statistic/AchievementsComponent';
+import { LogoComponent } from '@components/common/LogoComponent';
+import { AchievementsComponent } from '@components/statistic/AchievementsComponent';
 import { SideBarItems } from './SideBarItems';
 
 export const SideBar = (): JSX.Element => {

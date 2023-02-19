@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { AuthScreen, AuthTypes, IAuthConfig } from '../../../components/authentication/AuthCommon';
+import { AuthScreen, AuthTypes, IAuthConfig } from '@components/screens/authentication/AuthCommon';
 
 const Login: NextPage = (): JSX.Element => {
     const loginScreenConfig: IAuthConfig = {

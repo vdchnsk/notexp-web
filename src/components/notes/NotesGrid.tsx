@@ -18,8 +18,17 @@ export const NotesGrid = ({ notes }: INotesGridParams): JSX.Element => {
             `}
         >
             {notes.map((note) => (
-                <div className={`w-full mb-4`}>
-                    <NoteCard key={note.id} noteData={note} />
+                <div
+                    key={note.id}
+                    tabIndex={0}
+                    className={`
+                        rounded-md
+                        hover:animate-border-out
+                        focus:animate-border-out
+                        relative w-full mb-4
+                    `}
+                >
+                    <NoteCard noteData={note} />
                 </div>
             ))}
         </div>

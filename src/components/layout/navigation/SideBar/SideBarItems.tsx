@@ -1,6 +1,6 @@
 import { memo, useCallback, useMemo } from 'react';
 import Link from 'next/link';
-import { PermissionLevels } from '../../../common/enums';
+import { PermissionLevels } from '@common/enums';
 
 interface SideBarItem {
     readonly id: number;
@@ -43,7 +43,7 @@ export const SideBarItems = memo((): JSX.Element => {
                     isThisTabPermitted(element) && (
                         <span
                             className={`
-                                p-2 text-md
+                                p-2 text-lg
                             `}
                             key={element.id}
                         >

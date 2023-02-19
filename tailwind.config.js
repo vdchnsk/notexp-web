@@ -25,6 +25,17 @@ module.exports = {
     darkMode: 'class',
     theme: {
         extend: {
+            keyframes: {
+                'border-out': {
+                    '100%': {
+                        outline: '3px solid #49ae92',
+                        outlineOffset: '4px',
+                    },
+                },
+            },
+            animation: {
+                'border-out': 'border-out .3s forwards',
+            },
             textColor,
             backgroundColor,
             colors: {

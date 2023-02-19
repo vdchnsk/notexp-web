@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { MainLayout } from '../../../components/common/MainLayout';
+import { MainLayout } from '../../../components/layout/MainLayout';
 
 import CreateIcon from '@mui/icons-material/Create';
 import { Button } from '@material-ui/core';

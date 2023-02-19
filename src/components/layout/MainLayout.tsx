@@ -1,18 +1,17 @@
 import Head from 'next/head';
 import { MuiThemeProvider } from '@material-ui/core';
-import { PROJECT_NAME } from '../../constants/general';
-import { SideBar } from '../navigation/SideBar';
-import { FooterMain } from '../footer/FooterMain';
-import { TopBar } from '../navigation/TopBar';
+import { PROJECT_NAME, topBarHeight } from '../../common/constants/general';
+import { FooterMain } from './footer/FooterMain';
 import { mainTheme } from '../../styles/material_ui_presets/main_preset';
-import { SidebarWidth, topBarHeight } from '../../common/constants';
+import { SideBar } from './navigation/SideBar';
+import { TopBar } from './navigation/TopBar';
 
 interface MainLayoutProps {
     children: JSX.Element;
     title: string;
 }
 
-export const MainLayout = ({ children, title = 'Next' }: MainLayoutProps) => {
+export const MainLayout: React.FC<MainLayoutProps> = ({ children, title = PROJECT_NAME }) => {
     return (
         <MuiThemeProvider theme={mainTheme}>
             <Head>

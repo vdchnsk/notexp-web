@@ -13,7 +13,9 @@
         "resolveJsonModule": true,
         "paths": {
             "@components/*": ["./src/components/*"],
-            "@styles/*": ["./src/styles/*"]
+            "@styles/*": ["./src/styles/*"],
+            "@common/*": ["./src/common/*"],
+            "@/*": ["./src/*"]
         },
         "isolatedModules": true,
         "jsx": "preserve",

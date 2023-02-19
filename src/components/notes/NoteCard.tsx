@@ -20,9 +20,7 @@ export const NoteCard = ({ noteData }: INoteCardParams): JSX.Element => {
             `}
         >
             <Link href="/">
-                <a>
-                    <NotePreview src={noteData.mainPreviewImage} />
-                </a>
+                <NotePreview src={noteData.mainPreviewImage} />
             </Link>
             <div
                 className={`
